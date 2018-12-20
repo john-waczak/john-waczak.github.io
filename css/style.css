@@ -99,7 +99,15 @@ ul{
 
 
 
-
+/*----------- Images ---------------*/
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: auto;
+    width: 50%;
+}
 
 
 
