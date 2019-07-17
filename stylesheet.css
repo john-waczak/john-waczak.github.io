@@ -4,20 +4,20 @@ body {
 
 .sidenav {
     height: 100%;
-    width: 175px;
+    width: 10rem;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
     background-color: #000066;
     overflow-x: hidden;
-    padding-top: 20px;
+    padding-top: 1rem;
 }
 
 .sidenav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 1.6rem;
     color: #b3daff;
     display: block;
 }
@@ -27,9 +27,9 @@ body {
 }
 
 .main {
-    margin-left: 185px; /* Slightly larger than width of the sidenav */
-    margin-right: 2%;
-    font-size: 28px; /* Increased text to enable scrolling */
+    margin-left: 12rem; /* Slightly larger than width of the sidenav */
+    margin-right: 5rem;
+    font-size: 1.75rem; /* Increased text to enable scrolling */
     padding: 0px 10px;
 }
 
@@ -53,9 +53,9 @@ table {
 }
 
 td, th {
-    border: 1px solid #dddddd;
+    border: 0.1rem solid #dddddd;
     text-align: left;
-    padding: 8px;
+    padding: 0.75rem;
 }
 
 tr:nth-child(even) {
