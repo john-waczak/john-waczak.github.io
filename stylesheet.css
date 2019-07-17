@@ -27,7 +27,8 @@ body {
 }
 
 .main {
-    margin-left: 175px; /* Same as the width of the sidenav */
+    margin-left: 185px; /* Slightly larger than width of the sidenav */
+    margin-right: 2%;
     font-size: 28px; /* Increased text to enable scrolling */
     padding: 0px 10px;
 }
@@ -41,7 +42,7 @@ body {
 .center {
     display: block;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto-;
 }
 
 table {
