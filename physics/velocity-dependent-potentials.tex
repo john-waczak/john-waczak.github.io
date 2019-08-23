@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{cancel}
+
+\title{Velocity-Dependent Potentials}
+
+\begin{document}
+Previously, we considered forces that are derivable from a potential function,
+that is
+\begin{equation}
+  \vec{F}_i^{(a)} = -\nabla_iV
+\end{equation}
+We can actually do better than this and generalize our potential function. What
+if the potential depends not only on the coordinates $\{q_j\}$ but also the
+coordinate velocities $\{\dot{q}_j\}$? In this case, define
+\begin{equation}
+  Q_j = -\frac{\partial U}{\partial q_j}+\frac{d}{dt}\left( \frac{\partial U}{\partial \dot{q}_j} \right).
+\end{equation}
+D'Alembert's principle says
+\begin{equation}
+  \frac{d}{dt}\left( \frac{\partial T}{\parttial \dot{q}_j} \right)-\frac{\partial T}{\partial q_j}-Q_j = 0
+\end{equation}
+From this, we can see that our generalized potential still allows us to write
+\begin{equation}
+  \mathcal{L}= T-U
+\end{equation}
+so that d'Alembert's principle again reduces to the Euler-Lagrange equations:
+\begin{equation}
+  \frac{d}{dt}\frac{\partial \mathcal{L}}{\partial \dot{q}_j}-\frac{\partial \mathcal{L}}{\partial q_j} = 0 
+\end{equation}
+\end{document}
