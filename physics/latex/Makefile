@@ -1,14 +1,16 @@
-all: dAlemberts-principle velocity-dependent-potentials lorentz-force-from-lagrangian
+all: ../dAlemberts-principle.html ../velocity-dependent-potentials.html ../lorentz-force-from-lagrangian.html ../degrees-of-freedom.html
 
-
-dAlemberts-principle:  dAlemberts-principle.tex ../../post-template.html
+../dAlemberts-principle.html:  dAlemberts-principle.tex ../../post-template.html
 	pandoc --mathjax --template ../../post-template.html dAlemberts-principle.tex -o ../dAlemberts-principle.html
 
-velocity-dependent-potentials: velocity-dependent-potentials.tex ../../post-template.html
+../velocity-dependent-potentials.html: velocity-dependent-potentials.tex ../../post-template.html
 	pandoc --mathjax --template ../../post-template.html velocity-dependent-potentials.tex -o ../velocity-dependent-potentials.html
 
-lorentz-force-from-lagrangian:  lorentz-force-from-lagrangian.tex ../../post-template.html
+../lorentz-force-from-lagrangian.html:  lorentz-force-from-lagrangian.tex ../../post-template.html
 	pandoc --mathjax --template ../../post-template.html lorentz-force-from-lagrangian.tex -o ../lorentz-force-from-lagrangian.html
+
+../degrees-of-freedom.html: degrees-of-freedom.tex ../../post-template.html
+	pandoc --mathjax --template ../../post-template.html degrees-of-freedom.tex -o ../degrees-of-freedom.html
 
 
 clean:
