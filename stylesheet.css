@@ -61,3 +61,12 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+
+
+img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
