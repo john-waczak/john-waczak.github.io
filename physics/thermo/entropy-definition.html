@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+        <script type="text/javascript" async
+                src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
+        </script>
+        <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+        <script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+
+        <title>Entropy</title>
+    </head>
+    <body>
+
+    <div class="sidenav">
+        <a href="../index.html">About me</a>
+        <a href="../calendar.html">Calendar</a>
+        <!-- <a href="./projects.hmtl">Projects</a> -->
+        <!-- <a href="./photography.html">Photography</a> -->
+        <a href="../physics.html">Physics</a>
+        <a href="../math.html">Math</a>
+        <a href="../utd.html">UTD</a>
+    </div>
+
+    <div class="main">
+
+        <h2>Entropy</h2>
+
+        <p>To begin, we define a <strong>closed system</strong> as system with constant energy, constant number of particles, constant volume, and constant values for all external parameters that affect the system (gravity, EM fields, etc...)</p>
+        <p>Quantum states are <strong>accessible</strong> when they are compatible with the physical specification of the system. States that are not accessible are said to have <span class="math inline">\(0\)</span> probability of being measured.</p>
+        <h3 id="probability" class="unnumbered">Probability</h3>
+        <p>Consider a closed system. Then we define the probability of finding the system in a particular state <span class="math inline">\(s\)</span> to be given by <span class="math display">\[\mathcal{P}(s) = 1/g(s)\]</span> subject to the (unsurprising) condition that <span class="math display">\[\sum_s \mathcal{P}(s) = 1\]</span></p>
+        <p>From this definition, we find that the average of observations for some observable <span class="math inline">\(X\)</span> is given by <span class="math display">\[\langle  X \rangle = \sum_s X(s)\mathcal{P}(s) = \sum_s X(s)(1/g(s))\]</span> Where the final equality is for a closed system. In taking this average, we image a collection of similar systems with one in each accessible quantum state. Such a collection is called <strong>an ensemble</strong>.</p>
+        <h3 id="most-probable-configuration" class="unnumbered">Most probable configuration</h3>
+        <p>Consider two separate systems <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span> which are brought into contact so that their energies are allowed to transfer freely between the two systems. Such a scenario is called <strong>thermal contact</strong>. If each system separately had energy <span class="math inline">\(U_1\)</span> and <span class="math inline">\(U_2\)</span>, then the combined system is closed with energy <span class="math inline">\(U=U_1+U_2\)</span>.</p>
+        <p><strong>Question:</strong> what determines how energy flows between the systems?</p>
+        <p>Certainly, the solution is not so simple as <em>the system with greater energy transfers to the system with less</em> because, intuitively, if we consider two systems where the second system is just two copies of the first (i.e. we have doubled U, N, and V) we expect nothing to happen. It must be more complicated...</p>
+        <p>Instead, if we think about the number of accessible states, then the most probably division of energy should occur when the combined system has the greatest number of accessible states. To make this precise, let’s think about the multiplicity of the combined system. For every state specified when <span class="math inline">\(\mathcal{S}_1\)</span> is at <span class="math inline">\(U_1\)</span>, we expect there to be <span class="math inline">\(g(N_2, U-U_1)=g(N_2,U_2)\)</span> possible states for <span class="math inline">\(\mathcal{S}_2\)</span>. Therefore, the combined multiplicity is given as <span class="math display">\[g(N,U) = \sum_{U_1}g(N_1, U_1)g(N_2, U-U_1)\]</span> So that <span class="math inline">\(g\)</span> depends on <span class="math inline">\(N_1, N_2,U_1, U_2 = U-U_1\)</span>. To simplify our lives, we model a system by the properties of it’s most possible configuration, that is, the choice of <span class="math inline">\(U_1\)</span> and <span class="math inline">\(U_2\)</span> for which <span class="math inline">\(g(N,U)\)</span> is maximized. Maxima occur when the value of the function does not change for small changes in the arguments. In other words, we must find the condition for which <span class="math inline">\(dg=0\)</span> when <span class="math inline">\(dU_1\)</span> <span class="math inline">\(dU_2\)</span> occur due to a small transfer of energy. The total differential of <span class="math inline">\(g\)</span> is given by the multi-variable chain rule to be <span class="math display">\[\begin{aligned}
+          dg &amp;= \left( \frac{\partial g}{\partial U_1} \right)_{U_2}dU_1+\left( \frac{\partial g}{\partial U_2} \right)_{U_1}dU_2 \\
+             &amp;=  g_2\left( \frac{\partial g_1}{\partial U_1} \right)_{U_2}dU_1+g_1\left( \frac{\partial g_2}{\partial U_2} \right)_{U_1}dU_2\\
+             &amp;= 0\\
+         \Rightarrow&amp; \frac{1}{g_1}\left( \frac{\partial g_1}{\partial U_1} \right)_{U_2}dU_1  = -\frac{1}{g_2}\left( \frac{\partial g_2}{\partial U_2} \right)_{U_1}dU_2\end{aligned}\]</span> But we know something about the relationship between <span class="math inline">\(U_1\)</span> and <span class="math inline">\(U_2\)</span>! For a closed system <span class="math inline">\(U=U_1+U_2=\textrm{ constant}\)</span>. This means that <span class="math inline">\(dU=dU_1+dU_2=0\)</span> so that <span class="math display">\[\frac{1}{g_1}\left( \frac{\partial g_1}{\partial U_1} \right)_{U_2}  = \frac{1}{g_2}\left( \frac{\partial g_2}{\partial U_2} \right)_{U_1}\]</span> Noticing that <span class="math inline">\(\frac{1}{f}\frac{df}{dx}=\frac{d \ln(f(x))}{d x}\)</span> by reverse application of the chain rule, we can rewrite the equation as <span class="math display">\[\frac{\partial \ln g_1}{\partial U_1} = \frac{\partial \ln g_2}{\partial U_2}\]</span></p>
+        <p>These quantities are equal for systems in thermal equilibrium so we should give them a name. For historic reasons, we include a constant <span class="math inline">\(k_B\)</span>, and define the <strong>Entropy</strong> as <span class="math display">\[S = k_b\ln g(N,U)\]</span></p>
+        <p>The punchline of our derivation is <strong>Two systems are in equilibrium when the slopes of their S vs U graphs are the same.</strong></p>
+
+
+    </div>
+    </body>
+</html>
+
