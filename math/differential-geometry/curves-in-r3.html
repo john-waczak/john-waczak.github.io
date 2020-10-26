@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+        <script type="text/javascript" async
+                src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
+        </script>
+        <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+        <script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+
+        <title>Curves in <span class="math inline">\(\mathbb{R}^3\)</span></title>
+    </head>
+    <body>
+
+    <div class="sidenav">
+        <a href="../../index.html">About me</a>
+        <a href="../../calendar.html">Calendar</a>
+        <!-- <a href="./projects.hmtl">Projects</a> -->
+        <!-- <a href="./photography.html">Photography</a> -->
+        <a href="../../physics/physics.html">Physics</a>
+        <a href="../../math/math.html">Math</a>
+        <a href="../../utd.html">UTD</a>
+    </div>
+
+    <div class="main">
+
+        <h2>Curves in <span class="math inline">\(\mathbb{R}^3\)</span></h2>
+
+        <p>In order to discuss the theory of curves in <span class="math inline">\(\mathbb{R}^3\)</span> we must establish some preliminary definitions.</p>
+        <p><strong>Definition</strong>(<em>smooth</em>): A (real) function is said to be <em>smooth</em> if for every point it has continuous derivatives of any order.</p>
+        <p>With this definition, a parametrized curve is just a smooth map from some interval of the reals to the space in question. That is, <strong>Definition</strong>(<em>parametrized curve</em>): A <em>parametrized curve</em> is a smooth map <span class="math display">\[\vec{r}:(a,b)\subseteq \mathbb{R}\to \mathbb{R}^3\]</span> where <span class="math display">\[\vec{r}(\lambda): t\mapsto (x(\lambda),\; y(\lambda),\; z(\lambda)).\]</span> In other words, the coordinate functions <span class="math inline">\(x(\lambda),\;y(\lambda),\;z(\lambda)\)</span> are smooth. The variable <span class="math inline">\(\lambda\)</span> is called the <em>parameter</em> of the curve. Note that we have chosen to use <span class="math inline">\(\lambda\)</span> instead of <span class="math inline">\(t\)</span> because the parameter need not be “time”. This becomes very important in relativity where time is treated as a fourth dimension instead of a universal parameter. In this instance,</p>
+        <p>Consequently, we will not call the derivative of the curve with respect to our parameter “the velocity” and instead will use <em>tangent vector</em>. That is,</p>
+        <p><strong>Definition</strong>(<em>tangent vector</em>): The derivative of a paramterized curve <span class="math inline">\(\vec{r}(\lambda)\)</span> with respect to the parameter <span class="math inline">\(\lambda\)</span> at <span class="math inline">\(\lambda = \lambda_0\)</span> <span class="math display">\[\left.\frac{d\vec{r}}{d\lambda}\right|_{\lambda_0} = (x&#39;(\lambda_0),\; y&#39;(\lambda_0),\; z&#39;(\lambda_0))\]</span> is called the <em>tangent vector</em> to the curve <span class="math inline">\(\vec{r}(\lambda)\)</span> at the point <span class="math inline">\(\lambda=\lambda_0\)</span>.</p>
+        <p>What properties of curves should we care about? A perhaps more useful reformulation is <em>What properties can we use to compare two curves?</em> Everyday experience leads to two key concepts:</p>
+        <ul>
+        <li><p>The length of the curve (arclength)</p></li>
+        <li><p>The “bendiness” of the curve (curvature)</p></li>
+        </ul>
+        <p>Let’s start with the length of the curve. At every point along the curve <span class="math inline">\(\vec{r}(\lambda)\)</span> we can define a tangent vector <span class="math display">\[\vec{\mathcal{v}}_{{}_{\lambda_0}} = \left.\frac{d\vec{r}(\lambda)}{d\lambda}\right|_{\lambda_0}\]</span> The span of our tangent vector <span class="math inline">\(\vec{\mathcal{v}}_{{}_{\lambda_0}}\)</span> defines the tangent line to <span class="math inline">\(\vec{r}\)</span> at <span class="math inline">\(\lambda_0\)</span>. Therefore, we can consider partitioning our curve into segments such that <span class="math inline">\(\lambda\in \left\{\lambda_i\right\}_{i=0}^{n}\)</span> and approximating the curve by piecewise connected tangent lines. The length of the approximated curve is the sum of the lengths of each tangent line <span class="math inline">\(\sum|\vec{\mathcal{v}}_{{}_{\lambda_i}}|\Delta \lambda\)</span>. Thus, in the appropriate limit, we have <span class="math display">\[s(\lambda) = \int_{\lambda_0}^{\lambda}|\vec{\mathcal{v}}_{{}_{\lambda}}|d\lambda\]</span> which we take as <strong>the definition of the arclength of <span class="math inline">\(\vec{r}(\lambda)\)</span></strong>. Thus, we have reduced calculating the lengths of curves to calculating the lengths of tangent vectors.</p>
+        <p>To compute <span class="math inline">\(|\vec{\mathcal{v}}_{{}_{\lambda}}|\)</span>, we observe that <span class="math inline">\(\vec{\mathcal{v}}_{{}_{\lambda}}\in\mathbb{R}^3\)</span>. Thinking of <span class="math inline">\(\mathbb{R}^3\)</span> as a vector space, we define the length of a tangent vector by the Euclidean inner product <span class="math display">\[|\vec{\mathcal{v}}_{{}_{\lambda}}| = \sqrt{\vec{\mathcal{v}}_{{}_{\lambda}}\cdot\vec{\mathcal{v}}_{{}_{\lambda}}} = \sqrt{\sum_i v_i^2}.\]</span> <strong>Note:</strong> We chose to use the Euclidean inner product because it aligns with our everyday sense of length. This is just a choice! If evidence dictates that a different inner product should be used, we can pick something else.</p>
+        <p><strong>Note 2:</strong> If the parameter of our curve is physical time <span class="math inline">\(t\)</span>, then this definition says that the length of a curve is just the integral of the speed with respect to time.</p>
+        <p>What if we had chosen to parametrize our curve by the arclength. In other words, <span class="math inline">\(\lambda = s\)</span>? Then <span class="math display">\[\begin{aligned}
+          \frac{ds}{d\lambda} &amp;= |\vec{\mathcal{v}}_{{}_{\lambda}}| = 1  \\
+          \Rightarrow s &amp;= \int_{\lambda_0}^{\lambda}d\lambda = \lambda-\lambda_0\end{aligned}\]</span></p>
+
+
+    </div>
+    </body>
+</html>
+

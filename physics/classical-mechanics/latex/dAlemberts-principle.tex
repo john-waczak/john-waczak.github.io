@@ -1,0 +1,217 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{cancel}
+
+\title{d'Alembert's Principle}
+
+
+\begin{document}
+\maketitle
+
+The typical route to derive the Euler-Lagrange equations consists of stating a
+new ``principle'' of physics (Hamilton's principle) and then using the calculus
+of variations to derive the equations of motion. For the first pass through, it
+can seem as though quantities such as the Lagrangian $\mathcal{L}$ are pulled
+out of thin air. Only after working through many examples in full detail do you
+begin to accept the equivalence of this new method to the more familiar Newton's
+Laws.
+
+Here we will instead start with Newton's laws and present a different principle
+that will allow us to derive the Euler-Lagrange equations without presupposing
+the mysterious Lagrangian. Then, having convinced ourselves of the importance of
+the quantity $\mathcal{L}$ we will explore Hamilton's principle as it has many
+far reaching applications across seemingly disparate topics in physics.
+
+To begin, we define a \textit{virtual displacement} as an infinitesimal change
+of the coordinates that is consistent with whatever constraints we have imposed
+\emph{at a given instant of time}. We use virtual to distinguish from an actual
+displacement of the system which instead occurs during an interval $dt$.
+
+For a system in equilibrium, we expect that the total force on each $i^{th}$
+particle vanishes, i.e. $\vec{F}_i = 0$ so that the virtual work
+\begin{equation}
+  \sum_i \vec{F}_i \cdot \delta \vec{r}_i = 0
+\end{equation}
+is also zero. We can decompose the net work into an applied component and a
+component due to the constraints. That is,
+\begin{equation}
+  \vec{F}_i \equiv \vec{F}_i^{(a)} + \vec{f}_i
+\end{equation}
+Because forces of constraint $\vec{f}_i$ are always perpendicular to the surface
+while displacements are tangential, it is reasonable to restrict ourselves to
+situations in which the \emph{forces of constraint do no work}. For forces like
+sliding friction, we can not make this strong assumption and would have to amend our
+theory. Note however that \emph{rolling friction does no work}.
+
+Under this assumption, we now have
+\begin{equation}
+  \sum_i \vec{F}_i^{(a)}\cdot \delta \vec{r}_i = 0 
+\end{equation}
+Now if we write Newton's second law in the suggestive form
+\begin{equation}
+  \vec{F}_i - \frac{d}{dt}\vec{p}_i = 0 
+\end{equation}
+which we can now turn into:
+\begin{equation}
+  \require{cancel}
+  \sum_i \left( \vec{F}_i^{(a)}+\cancel{\vec{f}_i}-\frac{d}{dt}\vec{p}_i \right) = 0 .
+\end{equation}
+Note that I have canceled out the constraint force according to our assumption.
+This equation is commonly called \textit{d'Alembert's principle}. 
+It remains to turn this equation into something a little more useful. To do
+that, let's expand the terms in terms of our coordinates $\{q_i\}$. In general,
+we have
+\begin{equation}
+  \vec{r}_i = \vec{r}_i\left( q_1, q_2, ... , q_n , t \right)
+\end{equation}
+therefore, we have that the total differential is
+\begin{equation}
+  d\vec{r}_i = \sum_k \frac{\partial \vec{r}_i}{\partial q_k}dq_k + \frac{\partial \vec{r}_i}{\partial t}dt
+\end{equation}
+which let's us write the velocity as
+\begin{equation}
+  \vec{v}_i = \sum_k \frac{\partial \vec{r}_i}{\partial q_k}\dot{q_k} + \frac{\partial \vec{r}_i}{\partial t}
+\end{equation}
+
+We can define the virtual displacements to be the total differential without the
+time bit. That is,
+\begin{equation}
+  \delta\vec{r}_i = \sum_k \frac{\partial \vec{r}_i}{\partial q_k} \delta q_k 
+\end{equation}
+
+Now we want to expand both parts of d'Alembert's equation. Starting with
+the applied forces, we have
+\begin{align}
+  \sum_i \vec{F}_i^{(a)}\cdot \delta \vec{r}_i &= \sum_i\sum_j\vec{F}_i^{(a)}\cdot
+                                                 \frac{\partial \vec{r}_i}{\partial q_j}\delta q_j \\
+                                               &= \sum_j Q_j\delta q_j
+\end{align}
+where $Q_j$ are the \textit{generalized forces}. 
+
+Next, let's deal with the second term involving the momenta. We have 
+\begin{equation}
+  \sum_i \vec{p}_i \cdot \delta\vec{r}_i = \sum_i m_i\ddot{\vec{r}}_i\cdot \delta \vec{r}_i
+\end{equation}
+by definition of momentum. In terms of the coordinates, this is
+\begin{equation}
+  \sum_i\sum_j m_i\ddot{\vec{r}}_i \cdot \frac{\partial \vec{r}_i}{\partial q_j}\delta q_j
+\end{equation}
+
+The task of solving differential equations is hard, so let's try and simplify
+our lives by ripping off one of the derivatives from this equation.
+In doing so, we can take advantage of the product rule to write
+\begin{equation}
+  \sum_i m_i\ddot{\vec{r}}_i\cdot\frac{\partial \vec{r}_i}{\partial q_j} =
+  \sum_i\left[ \frac{d}{dt}\left( m_i\dot{\vec{r}_i}\cdot\frac{\partial \vec{r}_i}{\partial q_j} \right)
+  - m_i\dot{\vec{r}}_i\cdot \frac{d}{dt}\left( \frac{\partial \vec{r}_i}{\partial q_j} \right)\right].
+\end{equation}
+Exchanging the time derivative with the partial derivative yields
+\begin{equation}
+  \frac{d}{dt}\left( \frac{\partial \vec{r}_i}{\partial q_j} \right) = \frac{\partial}{\partial q_j}\frac{d\vec{r}_i}{dt} = \frac{\partial \vec{v}_i}{\partial q_j}
+\end{equation}
+we can also see from equation for the velocity that
+\begin{equation}
+  \frac{\partial \vec{v}_i}{\partial \dot{{q}}_j} = \frac{\partial \vec{r}_i}{\partial q_j}
+\end{equation}
+so that our momentum piece can be re-written
+\begin{equation}
+  \sum_i m_i\ddot{\vec{r}}_i\cdot\frac{\partial \vec{r}_i}{\partial q_j} =
+  \sum_i\left[ \frac{d}{dt}\left( m_i\vec{v}_i\cdot \frac{\partial \vec{v}_i}{\partial \dot{{q}}_j} \right)
+  - m_i\vec{v}_i\cdot\frac{\partial \vec{v}_i}{\partial q_j}\right]
+\end{equation}
+
+Sticking it all together yields
+\begin{equation}
+  \sum_i\left( \vec{F}_i^{(a)}-\frac{d}{dt}\vec{p}_i \right) =
+  \sum_j Q_j\delta_j - \sum_j   \sum_i\left[ \frac{d}{dt}\left( m_i\vec{v}_i\cdot
+      \frac{\partial \vec{v}_i}{\partial \dot{{q}}_j} \right)
+    - m_i\vec{v}_i\cdot\frac{\partial \vec{v}_i}{\partial q_j}\right]\delta q_j = 0 
+\end{equation}
+
+Let's use the chain rule to manipulate the summands. 
+\begin{align}
+  \frac{\partial}{\partial \dot{q}_j}\left(m_i \vec{v}_i^2) \right) &= 2m_i\vec{v}_i\cdot\frac{\partial \vec{v}_i}{\partial \dot{q}_j} \\
+  \Rightarrow m_i\vec{v}_i\cdot\frac{\partial \vec{v}_i}{\partial\dot{q}_j} &= \frac{\partial}{\partial \dot{q}_j}\left( \frac{1}{2}m_i\vec{v}_i^2 \right)
+\end{align}
+By the same argument, we also have
+\begin{equation}
+  m_i\vec{v}_i \cdot\frac{\partial\vec{v}_i}{\partial q_j} = \frac{\partial}{\partial q_j}\left( \frac{1}{2}m_i\vec{v}_i^2 \right)
+\end{equation}
+So, because differentiation is linear, we can move the time derivative outside
+of the sum to take advantage of these two relations. This results in
+\begin{equation}
+  \sum_j\left\{\frac{d}{dt}\left[ \frac{\partial}{\partial \dot{q}_j}\left( \sum_i \frac{1}{2}m_i\vec{v}_i^2  \right)\right] -\frac{\partial}{\partial q_j}\left(\sum_i\frac{1}{2}m_i\vec{v}_i^2  \right)-Q_j \right\} \delta q_j = 0
+\end{equation}
+and we know what $\sum_i\dfrac{1}{2}m_i\vec{v}_i^2$ is! It's the kinetic energy
+$T$. With this substitution, we have the much simpler form
+\begin{equation}
+  \sum_j\left\{ \frac{d}{dt}\left( \frac{\partial T}{\partial\dot{q}_j} \right)-\frac{\partial T}{\partial q_j}-Q_j \right\}\delta q_j = 0 
+\end{equation}
+
+We would like to be able to say that the only way for this equation to hold is
+for everything inside the sum other than the virtual displacements to be
+identically zero. This argument is \textbf{really important}.
+
+If our coordinates are independent of each other, then we can create an
+arbitrary virtual displacement in the direction $\delta q_\alpha$ so that all
+other $\delta q_j$ are zero. In this scenario, it must be that the rest of the
+summand is zero for our previous equation to hold. Therefore, because the choice
+of $\delta q_\alpha$ was arbitrary, we can repeat the process ad nauseum until
+we are convinced that each summand must also be zero. We conclude
+\begin{equation}
+  \frac{d}{dt}\left( \frac{\partial T}{\partial \dot{q}_j} \right) - \frac{\partial T}{\partial q_j} - Q_j = 0
+\end{equation}
+
+We can do even better if our forces $\vec{F}_i^{(a)}$ can be derived from a
+potential. Then, 
+\begin{equation}
+  Q_j = \sum_i \vec{F}_i^{(a)}\cdot\frac{\partial \vec{r}_i}{\partial q_j} = -\sum_i\nabla_i V\cdot\frac{\partial \vec{r}_i}{\partial q_j}
+\end{equation}
+Recalling connection between the geometric definition of the gradient and the
+multivariable chain rule, we have
+\begin{equation}
+  df = \nabla\cdot d\vec{r} = \sum_i\left(\frac{\partial f}{\partial x_i} \right)dx_i
+\end{equation}
+so that we can write
+\begin{equation}
+  Q_j = -\sum_i\nabla_iV\cdot\frac{\partial\vec{r}_i}{\partial q_j} = -\frac{\partial V}{\partial q_j}
+\end{equation}
+Plugging this in yields
+\begin{equation}
+  \frac{d}{dt}\left( \frac{\partial T}{\partial \dot{q}_j} \right) - \frac{\partial(T-V)}{\partial q_j} = 0 
+\end{equation}
+
+Lastly, if the potential $V$ does not depend on the generalized velocities
+$\dot{q}_j$, it must be true that the $\dot{q}_j$ derivative of $V$ vanishes
+allowing us to write
+\begin{equation}
+  \frac{d}{dt}\left( \frac{\partial T-V}{\partial \dot{q}_j} \right) - \frac{\partial(T-V)}{\partial q_j} = 0 
+\end{equation}
+so that by defining the Lagrangian $\mathcal{L}=T-V$, we have the familiar
+\begin{equation}
+  \frac{d}{dt}\left( \frac{\mathcal{L}}{\partial \dot{q}_j} \right) - \frac{\mathcal{L}}{\partial q_j} = 0 
+\end{equation}
+Euler-Lagrange equations for the $j^{th}$ generalized coordinate.
+
+
+In summary, we have assumed the following:
+\begin{itemize}
+\item Constraint forces do no work.
+\item The chosen coordinates $\{q_j\}$ are independent of each other
+\item The applied forces $\vec{F}_i^{(a)}$ can be derived from a scalar
+  potential $V=V(\vec{r}_1,\vec{r}_2,..,\vec{r}_n, t)$
+\end{itemize}
+
+
+What has this accomplished? We derived the Euler-Lagrange equations of
+Lagrangian dynamics without using the calculus of variations and presupposing
+the importance of the Lagrangian. By simply starting with Newton's second law,
+the Lagrangian formulation fell right out. There are a couple of limitations to
+this method however. We were forced to assume that the coordinates were
+independent of one another in order to allow us to break the summation. This
+certainly is not always true-- particularly if we have any kind of constraint
+function on the system $f(\vec{r}_\ell,...\vec{r}_k)=0$. This case and the issue
+of velocity dependent potentials (like the ones that appear for the Lorentz
+force) will require us to use different methods to derive the Euler-Lagrange
+equations under different assumptions. 
+\end{document}

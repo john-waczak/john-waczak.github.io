@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+        <script type="text/javascript" async
+                src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
+        </script>
+        <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+        <script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+
+        <title>The Dissipation Function</title>
+    </head>
+    <body>
+
+    <div class="sidenav">
+        <a href="../../index.html">About me</a>
+        <a href="../../calendar.html">Calendar</a>
+        <!-- <a href="./projects.hmtl">Projects</a> -->
+        <!-- <a href="./photography.html">Photography</a> -->
+        <a href="../../physics/physics.html">Physics</a>
+        <a href="../../math/math.html">Math</a>
+        <a href="../../utd.html">UTD</a>
+    </div>
+
+    <div class="main">
+
+        <h2>The Dissipation Function</h2>
+
+        <p>As we showed previously, dAlembert’s principle in it’s general form is <span class="math display">\[\frac{d}{dt}\left( \frac{\partial T}{\partial \dot{q}_j} \right)-\frac{\partial T}{\partial q_j} = Q_j\]</span> for generalized forces <span class="math inline">\(Q_j\)</span>. When these generalized forces are derived from a potential such that <span class="math display">\[Q_j = \sum_i \vec{F}_i\cdot\frac{\partial \vec{r}_i}{\partial q_j} = -\sum_i\nabla_iV\frac{\partial \vec{r}_i}{\partial q_j} = -\frac{\partial V}{\partial q_j}\]</span> then we can simplify the above to the familiar <span class="math display">\[\frac{d}{dt}\frac{\partial \mathcal{L}}{\partial \dot{q}_j}-\frac{\partial \mathcal{L}}{\partial q_j} = 0\]</span> suppose that not all of the forces in our system can be derived from a scalar potential <span class="math inline">\(V\)</span>. Then the Euler-Lagrange equations become <span class="math display">\[\frac{d}{dt}\frac{\partial \mathcal{L}}{\partial \dot{q}_j}-\frac{\partial \mathcal{L}}{\partial q_j} = Q_j\]</span> where <span class="math inline">\(Q_j\)</span> are the generalized forces that have some kind of velocity dependence.</p>
+        <p>Take for example the case of <strong>friction</strong>. It is easy to imagine cases where the frictional force is proportional to the velocity of the moving object so that in one dimension we would expect <span class="math display">\[F_{f,x} = -k_xv_x\]</span> This equation appears similar to a Hooke’s law force except the coordinate displacement has been replaced with velocity displacement. Keeping that in mind we can integrate this force against velocity to obtain a “potential” that we can use for our Lagrangian formulation. <span class="math display">\[\mathcal{F} = \frac{1}{2} \sum\limits_{\textrm{particles}}k_jv_j^2\]</span> Such a generalized potential is called <em>Rayleigh’s dissipation function</em>.</p>
+        <p>The generalized force would therefore be <span class="math display">\[\begin{aligned}
+          Q_j &amp;= \sum_i \vec{F}_{f, i}\cdot\frac{\partial \vec{r}_i}{\partial q_j} \\
+              &amp;= \sum_i\frac{\partial \mathcal{F}}{\partial \vec{v}_i}\frac{\partial \dot{\vec{r}}_i}{\partial \dot{q}_j} \\
+              &amp;= \sum_i\frac{\partial \mathcal{F}}{\partial \dot{\vec{r}}_i}\frac{\partial \dot{\vec{r}}_i}{\partial \dot{q}_j} \\
+              &amp;= -\frac{\partial \mathcal{F}}{\partial \dot{q}_j }\end{aligned}\]</span> One example where this is useful is in fluid dynamics. Imagine a sphere traveling through some water. Stoke’s law describes the frictional force (drag) on the sphere by <span class="math display">\[\vec{F} = 6\pi\eta a \vec{v}\]</span> where <span class="math inline">\(a\)</span> is the radius of the sphere and <span class="math inline">\(\eta\)</span> is the dynamic viscosity. This is an important law because you can us it to determine the viscosity of a fluid by dropping a sphere and observing the resulting dynamics. It also can be used to explain why water droplets in fog can remain suspended until they reach a critical size; gravity and drag compete.</p>
+
+
+    </div>
+    </body>
+</html>
+

@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{cancel}
+
+
+\title{The Dissipation Function}
+\begin{document}
+\maketitle
+
+As we showed previously, dAlembert's principle in it's general form is
+\begin{equation}
+  \frac{d}{dt}\left( \frac{\partial T}{\partial \dot{q}_j} \right)-\frac{\partial T}{\partial q_j} = Q_j
+\end{equation}
+for generalized forces $Q_j$. When these generalized forces are derived from a
+potential such that
+\begin{equation}
+  Q_j = \sum_i \vec{F}_i\cdot\frac{\partial \vec{r}_i}{\partial q_j} = -\sum_i\nabla_iV\frac{\partial \vec{r}_i}{\partial q_j} = -\frac{\partial V}{\partial q_j}
+\end{equation}
+then we can simplify the above to the familiar
+\begin{equation}
+  \frac{d}{dt}\frac{\partial \mathcal{L}}{\partial \dot{q}_j}-\frac{\partial \mathcal{L}}{\partial q_j} = 0 
+\end{equation}
+suppose that not all of the forces in our system can be derived from a scalar
+potential $V$. Then the Euler-Lagrange equations become
+\begin{equation}
+  \frac{d}{dt}\frac{\partial \mathcal{L}}{\partial \dot{q}_j}-\frac{\partial \mathcal{L}}{\partial q_j} = Q_j
+\end{equation}
+where $Q_j$ are the generalized forces that have some kind of velocity
+dependence. 
+
+Take for example the case of \textbf{friction}. It is easy to imagine cases
+where the frictional force is proportional to the velocity of the moving object
+so that in one dimension we would expect
+\begin{equation}
+  F_{f,x} = -k_xv_x
+\end{equation}
+This equation appears similar to a Hooke's law force except the coordinate
+displacement has been replaced with velocity displacement. Keeping that in mind
+we can integrate this force against velocity to obtain a ``potential'' that we
+can use for our Lagrangian formulation. 
+\begin{equation}
+  \mathcal{F} = \frac{1}{2} \sum\limits_{\textrm{particles}}k_jv_j^2
+\end{equation}
+Such a generalized potential is called \textit{Rayleigh's dissipation function}. 
+
+The generalized force would therefore be
+\begin{align}
+  Q_j &= \sum_i \vec{F}_{f, i}\cdot\frac{\partial \vec{r}_i}{\partial q_j} \\
+      &= \sum_i\frac{\partial \mathcal{F}}{\partial \vec{v}_i}\frac{\partial \dot{\vec{r}}_i}{\partial \dot{q}_j} \\
+      &= \sum_i\frac{\partial \mathcal{F}}{\partial \dot{\vec{r}}_i}\frac{\partial \dot{\vec{r}}_i}{\partial \dot{q}_j} \\
+      &= -\frac{\partial \mathcal{F}}{\partial \dot{q}_j }
+\end{align}
+One example where this is useful is in fluid dynamics. Imagine a sphere
+traveling through some water. Stoke's law describes the frictional force (drag)
+on the sphere by
+\begin{equation}
+  \vec{F} = 6\pi\eta a \vec{v}
+\end{equation}
+where $a$ is the radius of the sphere and $\eta$ is the dynamic viscosity. This
+is an important law because you can us it to determine the viscosity of a fluid
+by dropping a sphere and observing the resulting dynamics. It also can be used
+to explain why water droplets in fog can remain suspended until they reach a
+critical size; gravity and drag compete.  
+\end{document}

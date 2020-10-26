@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+        <script type="text/javascript" async
+                src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
+        </script>
+        <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+        <script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+
+        <title>States in Thermal Physics</title>
+    </head>
+    <body>
+
+    <div class="sidenav">
+        <a href="../../index.html">About me</a>
+        <a href="../../calendar.html">Calendar</a>
+        <!-- <a href="./projects.hmtl">Projects</a> -->
+        <!-- <a href="./photography.html">Photography</a> -->
+        <a href="../../physics/physics.html">Physics</a>
+        <a href="../../math/math.html">Math</a>
+        <a href="../../utd.html">UTD</a>
+    </div>
+
+    <div class="main">
+
+        <h2>States in Thermal Physics</h2>
+
+        <p>The root of statistical mechanics is the concept of the quantum mechanical stationary states of a system. Recall that stationary states are defined with respect to the energy eigenstates of the Hamiltonian, i.e., states satisfying <span class="math display">\[\hat{H}|\varphi_n\rangle = E_n|\varphi_n\rangle\]</span></p>
+        <p>Such a state is considered <em>stationary</em> because it’s time dependence is given by <span class="math display">\[|\varphi_n(t)\rangle = e^{-iE_n t/\hbar}|\varphi_n\rangle\]</span> In other words, the time dependence is a negligible <em>overall phase</em>; for all intents and purposes, there is no detectable time dependence.</p>
+        <p>As we can see in the above equation, each of these stationary states has a definite energy. If many states share the same energy, we call that energy value <em>degenerate</em>. For example a hydrogen atom in the <span class="math inline">\(n=2\)</span> energy state has energy <span class="math inline">\(-13.6/4\)</span> eV. Such a state has an allowed total angular momentum quantum number of <span class="math inline">\(\ell = 1\)</span> but there is <em>more than one possibility</em> for the z-projection of the angular momentum, namely <span class="math inline">\(m_\ell =
+        -1, \; 0, \; 1\)</span>. This means that the states <span class="math display">\[|2,1,1\rangle, \qquad |2,1,0\rangle, \qquad |2,1,-1\rangle\]</span> are degenerate with a <em>threefold degeneracy</em>. Another term for the degeneracy of a particular energy value is the <em>multiplicity</em>. For a system of many particles each with its own energy spectrum, we must be careful to keep track of the possible degeneracies. For example, a system of three non-interacting harmonic oscillators in one dimension has an energy spectrum given by <span class="math display">\[E_{n_1,n_2,n_3} = \frac{\hbar^2\pi^2}{2mL^2}(n_1^2+n_2^2+n_3^2)\]</span> where I have chosen to shift the <span class="math inline">\(|0,0,0\rangle\)</span> state energy to a value of <span class="math inline">\(0\)</span>. The first excited state of the system can be made in any of the following ways <span class="math display">\[|1,0,0\rangle, \quad |0,1,0\rangle, \quad |0,0,1\rangle\]</span> and therefore, we identify the energy <span class="math inline">\(\frac{\hbar^2\pi^2}{2mL^2}\)</span> as having a multiplicity of <span class="math inline">\(3\)</span>. <em>Note:</em> this is the same energy spectrum as for the 3-dimensional isotropic harmonic oscillator.</p>
+        <p>The <strong>fundamental assumption</strong> we make when doing statistical physics is that a closed system can be found in any of the quantum states accessible to it with equal probability.</p>
+
+
+    </div>
+    </body>
+</html>
+

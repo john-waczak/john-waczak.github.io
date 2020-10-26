@@ -1,0 +1,119 @@
+\input{../../../header.tex}
+
+\title{Curves in $\R^3$}
+
+\begin{document}
+\maketitle
+In order to discuss the theory of curves in $\R^3$ we must establish some
+preliminary definitions.
+
+\textbf{Definition}(\textit{smooth}): A (real) function is said to be \textit{smooth} if for every
+point it has continuous derivatives of any order.
+
+With this definition, a parametrized curve is just a smooth map from some
+interval of the reals to the space in question. That is,
+\textbf{Definition}(\textit{parametrized curve}): 
+A \textit{parametrized curve} is a smooth map
+\begin{equation}
+  \vec{r}:(a,b)\subseteq \R \to \R^3
+\end{equation}
+where
+\begin{equation}
+  \vec{r}(\lambda): t\mapsto (x(\lambda),\; y(\lambda),\; z(\lambda)).
+\end{equation}
+In other words, the coordinate functions $x(\lambda),\;y(\lambda),\;z(\lambda)$ are smooth. The
+variable $\lambda$ is called the \textit{parameter} of the curve. Note that we
+have chosen to use $\lambda$ instead of $t$ because the parameter need not be
+``time''. This becomes very important in relativity where time is treated as a
+fourth dimension instead of a universal parameter. In this instance, 
+
+Consequently, we will not call the derivative of the curve with respect to our
+parameter ``the velocity'' and instead will use \textit{tangent vector}. That
+is,
+
+\textbf{Definition}(\textit{tangent vector}): The derivative of a paramterized
+curve $\vec{r}(\lambda)$ with respect to the parameter $\lambda$ at $\lambda = \lambda_0$
+\begin{equation}
+  \left.\frac{d\vec{r}}{d\lambda}\right|_{\lambda_0} = (x'(\lambda_0),\; y'(\lambda_0),\; z'(\lambda_0))
+\end{equation}
+is called the \textit{tangent vector} to the curve $\vec{r}(\lambda)$ at the
+point $\lambda=\lambda_0$.
+
+What properties of curves should we care about? A perhaps more useful
+reformulation is \textit{What properties can we use to compare two
+  curves?} Everyday experience leads to two key concepts:
+\begin{itemize}
+\item The length of the curve (arclength)
+\item The ``bendiness'' of the curve (curvature)
+\end{itemize}
+
+Let's start with the length of the curve. At every point along the curve
+$\vec{r}(\lambda)$ we can define a tangent vector
+\begin{equation}
+  \velocity{\lambda_0} = \left.\frac{d\vec{r}(\lambda)}{d\lambda}\right|_{\lambda_0}
+\end{equation}
+The span of our tangent vector $\velocity{\lambda_0}$ defines the tangent line
+to $\vec{r}$ at $\lambda_0$. Therefore, we can consider partitioning our curve
+into segments such that $\lambda\in \left\{\lambda_i\right\}_{i=0}^{n}$ and
+approximating the curve by piecewise connected tangent lines. The length of the
+approximated curve is the sum of the lengths of each tangent line
+$\sum|\velocity{\lambda_i}|\Delta \lambda$. Thus, in the appropriate limit, we have
+\begin{equation}
+  s(\lambda) = \int_{\lambda_0}^{\lambda}|\velocity{\lambda}|d\lambda
+\end{equation}
+which we take as \textbf{the definition of the arclength of $\vec{r}(\lambda)$}.
+Thus, we have reduced calculating the lengths of curves to calculating the
+lengths of tangent vectors. 
+
+To compute $|\velocity{\lambda}|$, we observe that $\velocity{\lambda}\in\R^3$.
+Thinking of $\R^3$ as a vector space, we define the length of a tangent
+vector by the Euclidean inner product
+\begin{equation}
+  |\velocity{\lambda}| = \sqrt{\velocity{\lambda}\cdot\velocity{\lambda}} = \sqrt{\sum_i v_i^2}.
+\end{equation}
+\textbf{Note:} We chose to use the Euclidean inner product because it aligns
+with our everyday sense of length. This is just a choice! If evidence dictates
+that a different inner product should be used, we can pick something else.
+
+\textbf{Note 2:} If the parameter of our curve is physical time $t$, then this definition says
+that the length of a curve is just the integral of the speed with respect to
+time.
+
+What if we had chosen to parametrize our curve by the arclength. In other words,
+$\lambda = s$? Then
+\begin{align}
+  \frac{ds}{d\lambda} &= |\velocity{\lambda}| = 1  \\
+  \Rightarrow s &= \int_{\lambda_0}^{\lambda}d\lambda = \lambda-\lambda_0
+\end{align}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

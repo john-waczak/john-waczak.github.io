@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+        <script type="text/javascript" async
+                src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
+        </script>
+        <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+        <script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+
+        <title>Example: Lorentz Force Law from Lagrangian Perspective</title>
+    </head>
+    <body>
+
+    <div class="sidenav">
+        <a href="../../index.html">About me</a>
+        <a href="../../calendar.html">Calendar</a>
+        <!-- <a href="./projects.hmtl">Projects</a> -->
+        <!-- <a href="./photography.html">Photography</a> -->
+        <a href="../../physics/physics.html">Physics</a>
+        <a href="../../math/math.html">Math</a>
+        <a href="../../utd.html">UTD</a>
+    </div>
+
+    <div class="main">
+
+        <h2>Example: Lorentz Force Law from Lagrangian Perspective</h2>
+
+        <p>As an example, let us consider the electric and magnetic fields. For the case of electro/magneto-dynamics, they are defined as <span class="math display">\[\begin{aligned}
+          \vec{\boldsymbol{E}} &amp;= -\nabla\phi - \frac{\partial \vec{\boldsymbol{A}}}{\partial t}\\
+          \vec{\boldsymbol{B}} &amp;= \nabla \times \vec{\boldsymbol{A}}\end{aligned}\]</span> where <span class="math inline">\(\phi\)</span> is the scalar electric potential field and <span class="math inline">\(\vec{\boldsymbol{A}}\)</span> is the vector magnetic potential field. The force on a particle of charge <span class="math inline">\(q\)</span> moving at velocity <span class="math inline">\(\vec{\boldsymbol{v}}\)</span> through these fields can be described by <span class="math display">\[U = q\phi - q\left(\vec{\boldsymbol{A}}\cdot\vec{\boldsymbol{v}}\right)\]</span></p>
+        <p>This leads us to the Lagrangian <span class="math display">\[\mathcal{L} = \frac{1}{2}m|\vec{\boldsymbol{v}}|^2-q\phi+q\left( A_xv_x + A_yv_y+A_zv_z \right)\]</span></p>
+        <p>This Lagrangian is a vector equation and therefore, the rules of Lagrangian dynamics apply to each individual component. Let’s take the x-component as an example. We have <span class="math display">\[\begin{aligned}
+          \frac{\partial \mathcal{L}}{\partial \dot{x}} &amp;= m\dot{x}+qA_x \\
+          \frac{d}{dt}\frac{\partial \mathcal{L}}{\partial \dot{x}} &amp;= m\ddot{x}+\frac{d}{dt}A_x(x,y,z,t) \\
+                                                        &amp;= m\ddot{x}+ q\left( \frac{\partial A_x}{\partial t}+\frac{\partial A_x}{\partial x}\dot{x}+\frac{\partial A_x}{\partial y}\dot{y}+\frac{\partial A_x}{\partial z}\dot{z} \right) \\
+          \textrm{}\nonumber\\
+          \frac{\partial\mathcal{L}}{\partial x} &amp;= -q\frac{\partial \phi}{\partial x}+q\left( \frac{\partial A_x}{\partial x}\dot{x}+\frac{\partial A_y}{\partial x}\dot{y} + \frac{\partial A_z}{\partial x}\dot{x} \right)\end{aligned}\]</span> so that putting everything together, the Euler-Lagrange equation for <span class="math inline">\(x\)</span> is: <span class="math display">\[\begin{aligned}
+          m\ddot{x} &amp;= -q\frac{\partial \phi}{\partial x}+q\left( \dot{y}\left[\frac{\partial A_y}{\partial x}-\frac{\partial A_x}{\partial y}  \right]+\dot{z}\left[ \frac{\partial A_z}{\partial x}-\frac{\partial A_x}{\partial z} \right]-\frac{\partial A_x}{\partial t} \right)\\
+                    &amp;=q\left( -\frac{\partial \phi}{\partial x}-\frac{\partial A_x}{\partial t} \right)+q\left( \dot{y}B_z-\dot{z}B_y \right) \\
+                    &amp;= q\left( (\nabla\phi)_x-\frac{\partial A_x}{\partial t} \right)+ q\left( \vec{\boldsymbol{v}}\times\vec{\boldsymbol{B}} \right)_x\\
+          &amp;= q\left[ \vec{\boldsymbol{E}}+\vec{\boldsymbol{v}}\times\vec{\boldsymbol{B}} \right]_x\end{aligned}\]</span> which is exactly the Lorentz force law we know from E&amp;M. This example demonstrates how the Euler-Lagrange equations <em>do work</em> for some velocity dependent potentials.</p>
+
+
+    </div>
+    </body>
+</html>
+

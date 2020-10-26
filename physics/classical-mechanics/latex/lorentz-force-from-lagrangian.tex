@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{cancel}
+
+% vector stuff
+\newcommand{\basis}[1]{\hat{\mathbf{e}}_#1}
+\newcommand{\unit}[1]{\hat{\boldsymbol{#1}}}
+\newcommand{\bvec}[1]{\vec{\boldsymbol{#1}}}
+\newcommand{\del}{\vec{\nabla}}
+
+
+
+\title{Example: Lorentz Force Law from Lagrangian Perspective}
+\begin{document}
+\maketitle
+As an example, let us consider the electric and magnetic fields. For the case of
+electro/magneto-dynamics, they are defined as
+\begin{align}
+  \bvec{E} &= -\nabla\phi - \frac{\partial \bvec{A}}{\partial t}\\
+  \bvec{B} &= \nabla \times \bvec{A}
+\end{align}
+where $\phi$ is the scalar electric potential field and $\bvec{A}$ is the vector
+magnetic potential field. The force on a particle of charge $q$ moving at
+velocity $\bvec{v}$ through these fields can be described by
+\begin{equation}
+  U = q\phi - q\left(\bvec{A}\cdot\bvec{v}\right)
+\end{equation}
+
+This leads us to the Lagrangian
+\begin{equation}
+  \mathcal{L} = \frac{1}{2}m|\bvec{v}|^2-q\phi+q\left( A_xv_x + A_yv_y+A_zv_z \right)
+\end{equation}
+
+This Lagrangian is a vector equation and therefore, the rules of Lagrangian
+dynamics apply to each individual component. Let's take the x-component as an
+example. We have
+\begin{align}
+  \frac{\partial \mathcal{L}}{\partial \dot{x}} &= m\dot{x}+qA_x \\
+  \frac{d}{dt}\frac{\partial \mathcal{L}}{\partial \dot{x}} &= m\ddot{x}+\frac{d}{dt}A_x(x,y,z,t) \\
+                                                &= m\ddot{x}+ q\left( \frac{\partial A_x}{\partial t}+\frac{\partial A_x}{\partial x}\dot{x}+\frac{\partial A_x}{\partial y}\dot{y}+\frac{\partial A_x}{\partial z}\dot{z} \right) \\
+  \textrm{}\nonumber\\
+  \frac{\partial\mathcal{L}}{\partial x} &= -q\frac{\partial \phi}{\partial x}+q\left( \frac{\partial A_x}{\partial x}\dot{x}+\frac{\partial A_y}{\partial x}\dot{y} + \frac{\partial A_z}{\partial x}\dot{x} \right)
+\end{align}
+so that putting everything together, the Euler-Lagrange equation for $x$ is:
+\begin{align}
+  m\ddot{x} &= -q\frac{\partial \phi}{\partial x}+q\left( \dot{y}\left[\frac{\partial A_y}{\partial x}-\frac{\partial A_x}{\partial y}  \right]+\dot{z}\left[ \frac{\partial A_z}{\partial x}-\frac{\partial A_x}{\partial z} \right]-\frac{\partial A_x}{\partial t} \right)\\
+            &=q\left( -\frac{\partial \phi}{\partial x}-\frac{\partial A_x}{\partial t} \right)+q\left( \dot{y}B_z-\dot{z}B_y \right) \\
+            &= q\left( (\nabla\phi)_x-\frac{\partial A_x}{\partial t} \right)+ q\left( \bvec{v}\times\bvec{B} \right)_x\\
+  &= q\left[ \bvec{E}+\bvec{v}\times\bvec{B} \right]_x
+\end{align}
+which is exactly the Lorentz force law we know from E\&M. This example
+demonstrates how the Euler-Lagrange equations \textit{do work} for some velocity
+dependent potentials.
+
+\end{document}

@@ -1,0 +1,41 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % for creating figures
+\graphicspath{ {figures/} }
+
+\usepackage{amsmath} % for math environments
+\usepackage{amsfonts} % for math fonts like \mathbb
+\usepackage{cancel} % for striking out math
+\usepackage{bm} % for bold math
+
+
+
+% stop typing \mathbb a thousand times 
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\M}{\mathbb{M}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\sphere}{\mathbb{S}}
+
+\newcommand{\defeq}{\vcentcolon=} % for a prettier := sign
+\newcommand{\eqdef}{=\vcentcolon} % for a prettier =: sign
+
+
+% commands for bra-ket notation
+\newcommand{\bra}[1]{\left\langle#1\right|}
+\newcommand{\ket}[1]{\left|#1\right\rangle}
+\newcommand{\braket}[2]{\left\langle #1 \middle| #2 \right\rangle}
+\newcommand{\matrixel}[3]{\left\langle #1 \middle| #2 \middle| #3 \right\rangle}
+\newcommand{\expectation}[1]{\left\langle #1 \right\rangle}
+
+
+% vector stuff
+\newcommand{\basis}{\bm{\hat{e}}}
+\newcommand{\unit}[1]{\bm{\hat{#1}}}
+\newcommand{\bvec}[1]{\bm{\vec{#1}}}
+\newcommand{\del}{\bm{\vec{\nabla}}}
+
+% curly velocity v 
+\newcommand{\velocity}[1]{\vec{\mathcal{v}}_{{}_{#1}}}
+

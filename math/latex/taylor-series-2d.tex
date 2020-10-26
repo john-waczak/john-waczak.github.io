@@ -1,0 +1,79 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{cancel}
+
+
+
+
+
+\title{Taylor Series in Two Dimensions}
+\begin{document}
+Let's try and extend our notion of a Taylor series for a function $f$ of a
+single variable $x$ to two dimensions. To that end, let's now consider functions of
+the form
+\begin{equation}
+  f = f(x_1, x_2) 
+\end{equation}
+The properties of polynomials are \textit{really nice} and therefore it would be
+nice to have some kind of polynomial approximation to our function $f$. That is,
+we want to look for an approximation of the form
+\begin{equation}
+  f(x_1, x_2) = \sum_{i=0}^{\infty}\sum_{j=0}^{\infty} c_{ij}(x_1-a)^i(x_2-b)^j
+\end{equation}
+about the point $(x_1 = a, x_2 = b)$.
+
+Our task is to find the expansion coefficients $c_{ij}$. Again, one of the nice
+properties of polynomials is they are really easy to differentiate. Let's do
+this a couple of times and evaluate the result at the point $(a,b)$.
+\begin{align}
+  &f(x_1,x_2) = c_{00} + c_{10}(x_1-a) + c_{01}(x_2-b)+ c_{11}(x_1-a)(x_2-b) + c_{20}(x_1-a)^2+ c_{02}(x_2-b)^2 + ... \\
+  &\Rightarrow f(a,b) = c_{00} + 0 + 0 + 0 + ... \\
+  &\frac{\partial f}{\partial x_1}(x_1, x_2) = c_{10}  + c_{11}(x_2-b) + 2c_{20}(x_1-a) + ... \\
+  &\Rightarrow f_{x_1}(a,b) = c_{10} + 0 + 0 + ... \\
+  &\frac{\partial f}{\partial x_2}(x_1,x_2) = c_{01} + c_{11}(x_1-a) + 2c_{02}(x_2-b) + ... \\
+  &\Rightarrow f_{x_2}(a,b) = c_{01} + 0 + 0  + ... \\
+  &\frac{\partial^2 f}{\partial x_1 \partial x_1} = 2c_{20}+ 2c_{22}(x_2-b)^2 + 6c_{30}(x_1-a) + ... \\
+  &\quad \vdots  \hspace{5em}\vdots \quad \textrm{continuing the pattern} \\
+  &\quad \vdots  \hspace{5em}\vdots \\ 
+  &f_{x_1x_1}(a,b) = 2c_{20} + 0 + 0 + ... \\
+  &f_{x_2x_2}(a,b) = 2c_{02} + 0 + 0 + ... \\
+  &f_{x_1x_2}(a,b) = c_{11} + 0 + 0 + ... \\
+  &f_{x_2x_1}(a,b) = c_{11} + 0 + 0 + ...  \\ 
+  &\quad \vdots  \hspace{5em}\vdots 
+\end{align}
+Let's tabulate our results so far. We have
+\begin{center}
+ \begin{tabular}{||c c c ||} 
+   \hline
+   coefficient & value & k$\equiv$i+j \\ 
+   \hline\hline
+   $c_{00}$ & $f(a,b)$ & $0$ \\ 
+   \hline
+   $c_{10}$ & $f_{x_1}(a,b)$ & $1$ \\
+   \hline
+   $c_{01}$ & $f_{x_2}(a,b)$ & $1$ \\
+   $c_{20}$ & $\frac{1}{2}f_{x_1 x_1}(a,b)$ & $2$ \\
+   $c_{02}$ & $\frac{1}{2}f_{x_2 x_2}(a,b)$ & $2$ \\
+   $c_{11}$ & $\frac{1}{2}\left(f_{x_1 x_2}(a,b) + f_{x_2 x_1}(a,b)\right)$ & $2$ 
+\end{tabular}
+\end{center}
+Let's step back and look at this pattern. Remember that for the 1-D Taylor
+series, we have
+\begin{align}
+  f(z) &= \sum_{n=0}^\infty c_n(x-a)^n \\
+  c_n &= \frac{f^{(n)}(a)}{n!}
+\end{align}
+The pattern appears to be the same for the 2-D Taylor series for the combined
+order $k \equiv i + j$. The only difference is we have many different ways to
+combine $i$ $x_1$ derivatives with $j$ $x_2$ derivatives to make $k$ derivatives
+in total. Furthermore, because mixed partial derivatives are equivalent
+(according to Clairaut's theorem), we can take advantage of binomial
+coefficients to write the general form
+\begin{equation}
+  c_{ij} = \frac{1}{(i+j)!}\frac{\partial^i}{\partial x_1^i}\frac{\partial^j}{\partial x_2^j}f(a,b)\;\begin{pmatrix}i+j\\ i\end{pmatrix}(x_1-a)^i(x_2-b)^j
+\end{equation}
+
+
+
+
+\end{document}
