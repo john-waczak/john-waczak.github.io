@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Current Research Projects
-background: '/img/bg-about.jpg'
+background: '/img/bg-projects.png'
 ---
 
 
