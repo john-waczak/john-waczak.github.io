@@ -1,7 +1,7 @@
 ---
 layout: post
 title: New Format
-category: General
+category: general
 ---
 
 The original version of the site was essentially my weekend dive into *building-websites-from-scratch*. I knew nothing about html, css, and javascript so I forced myself to write a simple webpage that I could host on github pages just for the sake of learning how websites are made. As it turns out, creating a website with a minimum amount of modern web sophistication is a moderately challenging task that I just don't have the time for. 
