@@ -2,7 +2,7 @@ title:              John Waczak
 email:              john.waczak@utdallas.edu
 description:        Personal Website of John Waczak
 author:             John Waczak
-baseurl:            ""
+baseurl:            "/"
 url:                "https://john-waczak.github.io"
 
 # Social Profiles
