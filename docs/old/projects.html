@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About Me – John Waczak’s Homepage</title>
+<title>Current Research Projects – John Waczak, PhD</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">John Waczak’s Homepage</span>
+    <span class="navbar-title">John Waczak, PhD</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -87,14 +87,10 @@ ul.task-list li input[type="checkbox"] {
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
-<span class="menu-text">About</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -107,15 +103,24 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#real-time-georectification-of-visible-thermal-and-hyperspectral-images" id="toc-real-time-georectification-of-visible-thermal-and-hyperspectral-images" class="nav-link active" data-scroll-target="#real-time-georectification-of-visible-thermal-and-hyperspectral-images">1. Real-Time Georectification of Visible, Thermal, and Hyperspectral Images</a></li>
+  <li><a href="#super-resolution" id="toc-super-resolution" class="nav-link" data-scroll-target="#super-resolution">2. Super-Resolution</a></li>
+  <li><a href="#machine-learning-for-cross-platform-calibration" id="toc-machine-learning-for-cross-platform-calibration" class="nav-link" data-scroll-target="#machine-learning-for-cross-platform-calibration">3. Machine Learning for Cross Platform Calibration</a></li>
+  <li><a href="#scientific-machine-learning" id="toc-scientific-machine-learning" class="nav-link" data-scroll-target="#scientific-machine-learning">4. Scientific Machine Learning</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About Me</h1>
+<h1 class="title">Current Research Projects</h1>
 </div>
 
 
@@ -132,16 +137,24 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../img/me.png" class="img-fluid figure-img"></p>
-<figcaption>Me</figcaption>
-</figure>
-</div>
-<p>I am a 3rd year graduate student studying physics at the University of Texas at Dallas. I am working with <a href="https://davidlary.info/">Dr.&nbsp;David Lary</a> to apply methods from machine learning to autonomous robotic teams for remote sensing of the environment. Check out our recent paper <a href="https://www.semanticscholar.org/paper/Autonomous-Learning-of-New-Environments-with-a-Team-Lary-Schaefer/ea0163b70d7ae858b2083336692350154ebceaa1">here</a> and <a href="https://youtu.be/-VB3og5qmG0">this</a> great youtube video detailing the project.</p>
-<p>I have a wide variety of interests ranging from physics and mathematics to computation and machine learning. My plan is to use this site to detail the projects I’m working on as well as short blog posts about topics from math, physics, and machine learning.</p>
+<section id="real-time-georectification-of-visible-thermal-and-hyperspectral-images" class="level2">
+<h2 class="anchored" data-anchor-id="real-time-georectification-of-visible-thermal-and-hyperspectral-images">1. Real-Time Georectification of Visible, Thermal, and Hyperspectral Images</h2>
+<p>Our unmanned aerial vehicle captures images of the ground and water by utilizing a hyperspectral imager and high resolution visible and thermal cameras. The onboard GPS and IMU capture the position and orientation of the aircraft in real time, but how can we determine the location (latitude and longitude) of each pixel in the captured images?</p>
+</section>
+<section id="super-resolution" class="level2">
+<h2 class="anchored" data-anchor-id="super-resolution">2. Super-Resolution</h2>
+<p>The images captured by each imaging platform have different properties including spatial resolution, spectral resolution, and temporal resolution. How can we utilize (physics informed) machine learning techniques to cross achieve the maximum possible resolution in each of the categories? Can we infer reflectance spectra from an RGB image within a limited region and time window?</p>
+</section>
+<section id="machine-learning-for-cross-platform-calibration" class="level2">
+<h2 class="anchored" data-anchor-id="machine-learning-for-cross-platform-calibration">3. Machine Learning for Cross Platform Calibration</h2>
+<p>Our aerial vehicle samples surface reflectance spectra from the air. Meanwhile, our autonomous boat directly measures physical and chemical water properties including temperature, salinity, turbidity, hydrocarbon concentrations, and chlorophylls. Can we use physics informed approaches to map the remote observations of the aerial vehicle to the direct observations of the boat?</p>
+</section>
+<section id="scientific-machine-learning" class="level2">
+<h2 class="anchored" data-anchor-id="scientific-machine-learning">4. Scientific Machine Learning</h2>
+<p>Deep neural networks and many other machine learning methods behave as a black box; Carefully curated inputs are fed into an opaque model whose internal parameters are tweaked until sufficient agreement with target observations is achieved. How can we marry our existing scientific knowledge with machine learning methods so as to not <em>throw out</em> what we have already characterized through rigorous experiment? Can we achieve higher model generalizability by utilizing scientifically informed constraints and learning strategies?</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
