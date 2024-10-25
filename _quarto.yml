@@ -3,20 +3,37 @@ project:
   output-dir: docs
 
 website:
-  title: "John Waczak, PhD"
+  favicon: ./assets/icon.png
   navbar:
+    title: John Waczak
+    logo: ./assets/icon.png
     background: primary
     search: true
     right:
       - text: Home
+        icon: house-door
         href: index.md
-
+      - text: Posts
+        href: posts.md
+      - text: CV
+        href: ./assets/resume.pdf
+    tools: 
+      - icon: github
+        href: https://github.com/john-waczak
+  page-footer:
+    background: light
+    left: Copyright 2024, John Waczak
+    right: This website is built with [Quarto](https://quarto.org/)
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    theme:
+      light: cerulean
+      dark: darkly
     toc: true
     mainfont: Montserrat
+    page-layout: full
+
+
 
 
 

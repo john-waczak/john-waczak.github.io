@@ -1,17 +1,17 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "notes.html",
+    "href": "notes.html",
+    "title": "UPDATE IN PROGRESS",
     "section": "",
-    "text": "This is the about page"
+    "text": "UPDATE IN PROGRESS\n\n\nPost Ideas\n\nRecipes\nStereogram generation project in rust\nFinite Element Analysis from scratch (1d, 2d, 3d)\nConway’s Game of Life\nGeneral Machine Learning (going through PRML from scratch)\nRay tracing and radiative transfer (in rust, modeled after PBRT)\nPhysics and Differential Geometry\nGenetic Algorithms"
   },
   {
-    "objectID": "old/about.html",
-    "href": "old/about.html",
-    "title": "About Me",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "John Waczak, PhD",
     "section": "",
-    "text": "Me\n\n\nI am a 3rd year graduate student studying physics at the University of Texas at Dallas. I am working with Dr. David Lary to apply methods from machine learning to autonomous robotic teams for remote sensing of the environment. Check out our recent paper here and this great youtube video detailing the project.\nI have a wide variety of interests ranging from physics and mathematics to computation and machine learning. My plan is to use this site to detail the projects I’m working on as well as short blog posts about topics from math, physics, and machine learning."
+    "text": "Hello there! I’m John (last name pronounced “Wah-zak”), a recently graduated PhD physicist with interestes spanning applied physics, data science, machine learning, real-time sensing systems, remote sensing, and more. I’ll be using this site to host a combination of blog posts, resources, and an assortment of family recipes."
   },
   {
     "objectID": "old/projects.html",
@@ -49,10 +49,24 @@
     "text": "4. Scientific Machine Learning\nDeep neural networks and many other machine learning methods behave as a black box; Carefully curated inputs are fed into an opaque model whose internal parameters are tweaked until sufficient agreement with target observations is achieved. How can we marry our existing scientific knowledge with machine learning methods so as to not throw out what we have already characterized through rigorous experiment? Can we achieve higher model generalizability by utilizing scientifically informed constraints and learning strategies?"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "UPDATE IN PROGRESS",
+    "objectID": "posts/2024-10-25_first-post/index.html",
+    "href": "posts/2024-10-25_first-post/index.html",
+    "title": "First blog post!",
     "section": "",
-    "text": "UPDATE IN PROGRESS\n\n\nPost Ideas\n\nRecipes\nStereogram generation project in rust\nFinite Element Analysis from scratch (1d, 2d, 3d)\nConway’s Game of Life\nGeneral Machine Learning (going through PRML from scratch)\nRay tracing and radiative transfer (in rust, modeled after PBRT)\nPhysics and Differential Geometry\nGenetic Algorithms"
+    "text": "This is a test post\n\nHeading\nLet’s try some math:\n\\(\\int_a^b f(x) dx\\)\nnice!"
+  },
+  {
+    "objectID": "old/about.html",
+    "href": "old/about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "Me\n\n\nI am a 3rd year graduate student studying physics at the University of Texas at Dallas. I am working with Dr. David Lary to apply methods from machine learning to autonomous robotic teams for remote sensing of the environment. Check out our recent paper here and this great youtube video detailing the project.\nI have a wide variety of interests ranging from physics and mathematics to computation and machine learning. My plan is to use this site to detail the projects I’m working on as well as short blog posts about topics from math, physics, and machine learning."
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Blog Posts",
+    "section": "",
+    "text": "First blog post!\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\nOct 25, 2024\n\n\nJohn Waczak\n\n\n\n\n\n\nNo matching items"
   }
 ]

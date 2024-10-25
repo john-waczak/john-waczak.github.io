@@ -1,12 +1,30 @@
-# UPDATE IN PROGRESS
+---
+title: "John Waczak, PhD"
+image: assets/headshot-cropped.jpeg
+about: 
+  template: jolla
+  image-shape: round
+  image-width: 20em
+  links: 
+    - text: Contact me
+      icon: envelope
+      href: mailto:john.louis.waczak@gmail.com
+    - text: LinkedIn
+      icon: linkedin
+      href:  https://www.linkedin.com/in/john-waczak/
+    - text: GitHub
+      icon: github
+      href: https://github.com/john-waczak
+    - text: Resume
+      icon: newspaper
+      href: ./assets/resume.pdf
+toc: false
+---
 
-# Post Ideas
+<!-- template: trestles -->
+<!-- https://ucsb-meds.github.io/creating-quarto-websites/ -->
 
-- Recipes
-- Stereogram generation project in rust
-- Finite Element Analysis from scratch (1d, 2d, 3d)
-- Conway's Game of Life
-- General Machine Learning (going through PRML *from scratch*)
-- Ray tracing and radiative transfer (in rust, modeled after `PBRT`)
-- Physics and Differential Geometry
-- Genetic Algorithms
+
+Hello there! I'm John (last name pronounced "Wah-zak"), a recently graduated PhD physicist with interestes spanning applied physics, data science, machine learning, real-time sensing systems, remote sensing, and more. I'll be using this site to host a combination of blog posts, resources, and an assortment of family recipes. 
+
+

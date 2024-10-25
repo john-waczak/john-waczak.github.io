@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="John Waczak">
+<meta name="dcterms.date" content="2024-10-25">
 
-<title>Current Research Projects</title>
+<title>First blog post!</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +25,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href=".././assets/icon.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../.././assets/icon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,6 +72,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -80,10 +111,10 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src=".././assets/icon.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../.././assets/icon.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">John Waczak</span>
     </a>
   </div>
@@ -94,16 +125,16 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> <i class="bi bi-house-door" role="img">
+    <a class="nav-link" href="../../index.html"> <i class="bi bi-house-door" role="img">
 </i> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../posts.html"> 
+    <a class="nav-link" href="../../posts.html"> 
 <span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href=".././assets/resume.pdf"> 
+    <a class="nav-link" href="../.././assets/resume.pdf"> 
 <span class="menu-text">CV</span></a>
   </li>  
 </ul>
@@ -124,10 +155,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#real-time-georectification-of-visible-thermal-and-hyperspectral-images" id="toc-real-time-georectification-of-visible-thermal-and-hyperspectral-images" class="nav-link active" data-scroll-target="#real-time-georectification-of-visible-thermal-and-hyperspectral-images">1. Real-Time Georectification of Visible, Thermal, and Hyperspectral Images</a></li>
-  <li><a href="#super-resolution" id="toc-super-resolution" class="nav-link" data-scroll-target="#super-resolution">2. Super-Resolution</a></li>
-  <li><a href="#machine-learning-for-cross-platform-calibration" id="toc-machine-learning-for-cross-platform-calibration" class="nav-link" data-scroll-target="#machine-learning-for-cross-platform-calibration">3. Machine Learning for Cross Platform Calibration</a></li>
-  <li><a href="#scientific-machine-learning" id="toc-scientific-machine-learning" class="nav-link" data-scroll-target="#scientific-machine-learning">4. Scientific Machine Learning</a></li>
+  <li><a href="#heading" id="toc-heading" class="nav-link active" data-scroll-target="#heading">Heading</a></li>
   </ul>
 </nav>
     </div>
@@ -136,14 +164,29 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Current Research Projects</h1>
-</div>
+<h1 class="title">First blog post!</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Quarto</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta column-page-left">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>John Waczak </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 25, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -153,21 +196,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="real-time-georectification-of-visible-thermal-and-hyperspectral-images" class="level2">
-<h2 class="anchored" data-anchor-id="real-time-georectification-of-visible-thermal-and-hyperspectral-images">1. Real-Time Georectification of Visible, Thermal, and Hyperspectral Images</h2>
-<p>Our unmanned aerial vehicle captures images of the ground and water by utilizing a hyperspectral imager and high resolution visible and thermal cameras. The onboard GPS and IMU capture the position and orientation of the aircraft in real time, but how can we determine the location (latitude and longitude) of each pixel in the captured images?</p>
-</section>
-<section id="super-resolution" class="level2">
-<h2 class="anchored" data-anchor-id="super-resolution">2. Super-Resolution</h2>
-<p>The images captured by each imaging platform have different properties including spatial resolution, spectral resolution, and temporal resolution. How can we utilize (physics informed) machine learning techniques to cross achieve the maximum possible resolution in each of the categories? Can we infer reflectance spectra from an RGB image within a limited region and time window?</p>
-</section>
-<section id="machine-learning-for-cross-platform-calibration" class="level2">
-<h2 class="anchored" data-anchor-id="machine-learning-for-cross-platform-calibration">3. Machine Learning for Cross Platform Calibration</h2>
-<p>Our aerial vehicle samples surface reflectance spectra from the air. Meanwhile, our autonomous boat directly measures physical and chemical water properties including temperature, salinity, turbidity, hydrocarbon concentrations, and chlorophylls. Can we use physics informed approaches to map the remote observations of the aerial vehicle to the direct observations of the boat?</p>
-</section>
-<section id="scientific-machine-learning" class="level2">
-<h2 class="anchored" data-anchor-id="scientific-machine-learning">4. Scientific Machine Learning</h2>
-<p>Deep neural networks and many other machine learning methods behave as a black box; Carefully curated inputs are fed into an opaque model whose internal parameters are tweaked until sufficient agreement with target observations is achieved. How can we marry our existing scientific knowledge with machine learning methods so as to not <em>throw out</em> what we have already characterized through rigorous experiment? Can we achieve higher model generalizability by utilizing scientifically informed constraints and learning strategies?</p>
+<p>This is a test post</p>
+<section id="heading" class="level1">
+<h1>Heading</h1>
+<p>Let’s try some math:</p>
+<p><span class="math inline">\(\int_a^b f(x) dx\)</span></p>
+<p>nice!</p>
 
 
 </section>

@@ -5,3 +5,5 @@ Gemfile.lock
 *.jekyll-cache
 
 /.quarto/
+
+.DS_Store
