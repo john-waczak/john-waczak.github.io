@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This is the about page"
+  },
+  {
+    "objectID": "old/about.html",
+    "href": "old/about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "Me\n\n\nI am a 3rd year graduate student studying physics at the University of Texas at Dallas. I am working with Dr. David Lary to apply methods from machine learning to autonomous robotic teams for remote sensing of the environment. Check out our recent paper here and this great youtube video detailing the project.\nI have a wide variety of interests ranging from physics and mathematics to computation and machine learning. My plan is to use this site to detail the projects I’m working on as well as short blog posts about topics from math, physics, and machine learning."
+  },
+  {
+    "objectID": "old/projects.html",
+    "href": "old/projects.html",
+    "title": "Current Research Projects",
+    "section": "",
+    "text": "Our unmanned aerial vehicle captures images of the ground and water by utilizing a hyperspectral imager and high resolution visible and thermal cameras. The onboard GPS and IMU capture the position and orientation of the aircraft in real time, but how can we determine the location (latitude and longitude) of each pixel in the captured images?"
+  },
+  {
+    "objectID": "old/projects.html#real-time-georectification-of-visible-thermal-and-hyperspectral-images",
+    "href": "old/projects.html#real-time-georectification-of-visible-thermal-and-hyperspectral-images",
+    "title": "Current Research Projects",
+    "section": "",
+    "text": "Our unmanned aerial vehicle captures images of the ground and water by utilizing a hyperspectral imager and high resolution visible and thermal cameras. The onboard GPS and IMU capture the position and orientation of the aircraft in real time, but how can we determine the location (latitude and longitude) of each pixel in the captured images?"
+  },
+  {
+    "objectID": "old/projects.html#super-resolution",
+    "href": "old/projects.html#super-resolution",
+    "title": "Current Research Projects",
+    "section": "2. Super-Resolution",
+    "text": "2. Super-Resolution\nThe images captured by each imaging platform have different properties including spatial resolution, spectral resolution, and temporal resolution. How can we utilize (physics informed) machine learning techniques to cross achieve the maximum possible resolution in each of the categories? Can we infer reflectance spectra from an RGB image within a limited region and time window?"
+  },
+  {
+    "objectID": "old/projects.html#machine-learning-for-cross-platform-calibration",
+    "href": "old/projects.html#machine-learning-for-cross-platform-calibration",
+    "title": "Current Research Projects",
+    "section": "3. Machine Learning for Cross Platform Calibration",
+    "text": "3. Machine Learning for Cross Platform Calibration\nOur aerial vehicle samples surface reflectance spectra from the air. Meanwhile, our autonomous boat directly measures physical and chemical water properties including temperature, salinity, turbidity, hydrocarbon concentrations, and chlorophylls. Can we use physics informed approaches to map the remote observations of the aerial vehicle to the direct observations of the boat?"
+  },
+  {
+    "objectID": "old/projects.html#scientific-machine-learning",
+    "href": "old/projects.html#scientific-machine-learning",
+    "title": "Current Research Projects",
+    "section": "4. Scientific Machine Learning",
+    "text": "4. Scientific Machine Learning\nDeep neural networks and many other machine learning methods behave as a black box; Carefully curated inputs are fed into an opaque model whose internal parameters are tweaked until sufficient agreement with target observations is achieved. How can we marry our existing scientific knowledge with machine learning methods so as to not throw out what we have already characterized through rigorous experiment? Can we achieve higher model generalizability by utilizing scientifically informed constraints and learning strategies?"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "UPDATE IN PROGRESS",
+    "section": "",
+    "text": "UPDATE IN PROGRESS\n\n\nPost Ideas\n\nRecipes\nStereogram generation project in rust\nFinite Element Analysis from scratch (1d, 2d, 3d)\nConway’s Game of Life\nGeneral Machine Learning (going through PRML from scratch)\nRay tracing and radiative transfer (in rust, modeled after PBRT)\nPhysics and Differential Geometry\nGenetic Algorithms"
+  }
+]
