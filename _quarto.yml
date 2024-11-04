@@ -1,6 +1,5 @@
 project:
   type: website
-  output-dir: docs
 
 website:
   favicon: ./assets/icon.png
@@ -16,7 +15,7 @@ website:
       - text: Posts
         href: posts.md
       - text: Recipes
-        href: recipes.md
+        href: https://john-waczak.github.io/recipes
       - text: CV
         href: ./assets/resume.pdf
     tools: 
