@@ -1,0 +1,17 @@
+[
+  {
+    "listing": "/recipes.html",
+    "items": [
+      "/recipes/obrien-potato-casserole/index.html",
+      "/recipes/green-bean-casserole/index.html",
+      "/recipes/grandmas-cheesecake/index.html",
+      "/recipes/cheesy-potato-casserole/index.html"
+    ]
+  },
+  {
+    "listing": "/posts.html",
+    "items": [
+      "/posts/2024-10-25_first-post/index.html"
+    ]
+  }
+]
