@@ -10,3 +10,6 @@
 - Ray tracing and radiative transfer (in rust, modeled after `PBRT`)
 - Physics and Differential Geometry
 - Genetic Algorithms
+- GPU computing in Rust/Julia
+- Ising model simulations
+- Random Sampling methods (including Metropolis-Hastings, Monte Carlo, Hamiltonian Monte Carlo, etc...) [this could be a nice start](https://arxiv.org/pdf/1701.02434)

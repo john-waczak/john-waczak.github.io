@@ -6,7 +6,7 @@ categories: [casserole, potatoes, savory]
 ---
 
 
-![](cheesy_potatoes.jpeg){width=300}  
+![](./cheesy_potatoes.jpeg){width=300}  
 
 # History 
 
@@ -29,7 +29,7 @@ Topping:
 - $2$ tbsp butter melted
 
 
-![](thumbnail.jpg){width=300}
+![](./thumbnail.jpg){width=300}
 
 # Preparation
 

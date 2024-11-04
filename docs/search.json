@@ -4,7 +4,7 @@
     "href": "notes.html",
     "title": "UPDATE IN PROGRESS",
     "section": "",
-    "text": "UPDATE IN PROGRESS\n\n\nPost Ideas\n\nRecipes\nStereogram generation project in rust\nFinite Element Analysis from scratch (1d, 2d, 3d)\nConway’s Game of Life\nGeneral Machine Learning (going through PRML from scratch)\nRay tracing and radiative transfer (in rust, modeled after PBRT)\nPhysics and Differential Geometry\nGenetic Algorithms"
+    "text": "UPDATE IN PROGRESS\n\n\nPost Ideas\n\nRecipes\nStereogram generation project in rust\nFinite Element Analysis from scratch (1d, 2d, 3d)\nConway’s Game of Life\nGeneral Machine Learning (going through PRML from scratch)\nRay tracing and radiative transfer (in rust, modeled after PBRT)\nPhysics and Differential Geometry\nGenetic Algorithms\nGPU computing in Rust/Julia\nIsing model simulations\nRandom Sampling methods (including Metropolis-Hastings, Monte Carlo, Hamiltonian Monte Carlo, etc…) this could be a nice start"
   },
   {
     "objectID": "recipes/cheesy-potato-casserole/index.html",

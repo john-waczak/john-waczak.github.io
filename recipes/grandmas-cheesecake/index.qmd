@@ -6,7 +6,7 @@ categories: [dessert, sweet, cake]
 ---
 
 
-![](cheesecake.jpeg)
+![](./cheesecake.jpeg)
 
 
 # History 
