@@ -19,6 +19,7 @@ about:
       icon: newspaper
       href: ./assets/resume.pdf
 toc: false
+comments: false
 ---
 
 <!-- template: trestles -->

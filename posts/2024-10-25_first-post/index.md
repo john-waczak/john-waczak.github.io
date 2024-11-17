@@ -5,9 +5,6 @@ author:
 date: 10-25-2024    
 categories: [Quarto,]
 draft: false
-comments: 
-  utterances:
-    repo: john-waczak/john-waczak.github.io
 ---
 
 This is a test post

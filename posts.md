@@ -5,5 +5,6 @@ listing:
   type: default 
   sort: "date desc"
   categories: true
+comments: false
 ---
 

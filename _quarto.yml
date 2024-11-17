@@ -25,9 +25,6 @@ website:
     background: light
     left: Copyright 2024, John Waczak
     right: This website is built with [Quarto](https://quarto.org/)
-  comments: 
-    utterances:
-      repo: john-waczak/john-waczak.github.io
 format:
   html:
     theme:
@@ -36,6 +33,9 @@ format:
     toc: true
     mainfont: Montserrat
     page-layout: full
+    comments: 
+      utterances:
+        repo: john-waczak/john-waczak.github.io
 
 
 
