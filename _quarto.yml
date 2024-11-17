@@ -27,7 +27,7 @@ website:
     right: This website is built with [Quarto](https://quarto.org/)
   comments: 
     utterances:
-      repo: john-waczak.github.io
+      repo: john-waczak/john-waczak.github.io
 format:
   html:
     theme:
