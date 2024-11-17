@@ -17,3 +17,5 @@
 - Visualizing the Covariant Derivative
 - Differentials that show up in Classical mechanics, e.g. $\delta$, $\partial$, $d$, $\nabla$, etc...
 - Interpretations of quantum mechanics. Leonard Susskind had an interesting point about the Many Worlds interpretation: How many worlds are generated when a state like $\lvert \psi \rangle = \frac{\sqrt{3}}{2}\lvert 1 \rangle + \frac{1}{2}\lvert 2 \rangle$ is measured? 3 worlds with $\lvert 1 \rangle$ and 1 world with $\lvert 2 \rangle$?
+- Computed tomography 
+- Sterogram generation (this would be a fun rust project to start)
