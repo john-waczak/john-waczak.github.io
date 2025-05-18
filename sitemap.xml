@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://john-waczak.github.io/old/projects.html</loc>
+    <lastmod>2025-05-18T19:22:32.672Z</lastmod>
+  </url>
+  <url>
     <loc>https://john-waczak.github.io/notes.html</loc>
-    <lastmod>2024-11-05T14:53:21.311Z</lastmod>
+    <lastmod>2025-05-18T19:22:32.655Z</lastmod>
+  </url>
+  <url>
+    <loc>https://john-waczak.github.io/posts/2025-05-18_project-backlog/index.html</loc>
+    <lastmod>2025-05-18T19:33:22.926Z</lastmod>
   </url>
   <url>
     <loc>https://john-waczak.github.io/index.html</loc>
-    <lastmod>2024-11-17T16:13:19.395Z</lastmod>
-  </url>
-  <url>
-    <loc>https://john-waczak.github.io/old/projects.html</loc>
-    <lastmod>2024-11-04T14:27:01.044Z</lastmod>
-  </url>
-  <url>
-    <loc>https://john-waczak.github.io/posts/2024-10-25_first-post/index.html</loc>
-    <lastmod>2024-11-17T16:12:52.460Z</lastmod>
-  </url>
-  <url>
-    <loc>https://john-waczak.github.io/old/about.html</loc>
-    <lastmod>2024-11-04T14:27:01.019Z</lastmod>
+    <lastmod>2025-05-18T19:22:32.655Z</lastmod>
   </url>
   <url>
     <loc>https://john-waczak.github.io/posts.html</loc>
-    <lastmod>2024-11-17T16:14:08.360Z</lastmod>
+    <lastmod>2025-05-18T19:23:17.519Z</lastmod>
+  </url>
+  <url>
+    <loc>https://john-waczak.github.io/old/about.html</loc>
+    <lastmod>2025-05-18T19:22:32.656Z</lastmod>
   </url>
 </urlset>

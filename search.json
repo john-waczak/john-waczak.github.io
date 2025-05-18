@@ -1,19 +1,5 @@
 [
   {
-    "objectID": "notes.html",
-    "href": "notes.html",
-    "title": "UPDATE IN PROGRESS",
-    "section": "",
-    "text": "UPDATE IN PROGRESS\n\n\nPost Ideas\n\nRecipes\nStereogram generation project in rust\nFinite Element Analysis from scratch (1d, 2d, 3d)\nConway’s Game of Life\nGeneral Machine Learning (going through PRML from scratch)\nRay tracing and radiative transfer (in rust, modeled after PBRT)\nPhysics and Differential Geometry\nGenetic Algorithms\nGPU computing in Rust/Julia\nIsing model simulations\nRandom Sampling methods (including Metropolis-Hastings, Monte Carlo, Hamiltonian Monte Carlo, etc…) this could be a nice start\nVisualizing the Lie Derivative\nVisualizing the Covariant Derivative\nDifferentials that show up in Classical mechanics, e.g. \\(\\delta\\), \\(\\partial\\), \\(d\\), \\(\\nabla\\), etc…\nInterpretations of quantum mechanics. Leonard Susskind had an interesting point about the Many Worlds interpretation: How many worlds are generated when a state like \\(\\lvert \\psi \\rangle = \\frac{\\sqrt{3}}{2}\\lvert 1 \\rangle + \\frac{1}{2}\\lvert 2 \\rangle\\) is measured? 3 worlds with \\(\\lvert 1 \\rangle\\) and 1 world with \\(\\lvert 2 \\rangle\\)?\nComputed tomography\nSterogram generation (this would be a fun rust project to start)"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "John Waczak, PhD",
-    "section": "",
-    "text": "Hello there! I’m John (last name pronounced “Wah-zak”), a recently graduated PhD physicist with interestes spanning applied physics, data science, machine learning, real-time sensing systems, remote sensing, and more. I’ll be using this site to host a combination of blog posts, resources, and an assortment of family recipes."
-  },
-  {
     "objectID": "old/projects.html",
     "href": "old/projects.html",
     "title": "Current Research Projects",
@@ -49,11 +35,32 @@
     "text": "4. Scientific Machine Learning\nDeep neural networks and many other machine learning methods behave as a black box; Carefully curated inputs are fed into an opaque model whose internal parameters are tweaked until sufficient agreement with target observations is achieved. How can we marry our existing scientific knowledge with machine learning methods so as to not throw out what we have already characterized through rigorous experiment? Can we achieve higher model generalizability by utilizing scientifically informed constraints and learning strategies?"
   },
   {
-    "objectID": "posts/2024-10-25_first-post/index.html",
-    "href": "posts/2024-10-25_first-post/index.html",
-    "title": "First blog post!",
+    "objectID": "notes.html",
+    "href": "notes.html",
+    "title": "UPDATE IN PROGRESS",
     "section": "",
-    "text": "This is a test post\n\nHeading\nLet’s try some math:\n\\(\\int_a^b f(x) dx\\)\nnice!"
+    "text": "UPDATE IN PROGRESS\n\n\nPost Ideas\n\nRecipes\nStereogram generation project in rust\nFinite Element Analysis from scratch (1d, 2d, 3d)\nConway’s Game of Life\nGeneral Machine Learning (going through PRML from scratch)\nRay tracing and radiative transfer (in rust, modeled after PBRT)\nPhysics and Differential Geometry\nGenetic Algorithms\nGPU computing in Rust/Julia\nIsing model simulations\nRandom Sampling methods (including Metropolis-Hastings, Monte Carlo, Hamiltonian Monte Carlo, etc…) this could be a nice start\nVisualizing the Lie Derivative\nVisualizing the Covariant Derivative\nDifferentials that show up in Classical mechanics, e.g. \\(\\delta\\), \\(\\partial\\), \\(d\\), \\(\\nabla\\), etc…\nInterpretations of quantum mechanics. Leonard Susskind had an interesting point about the Many Worlds interpretation: How many worlds are generated when a state like \\(\\lvert \\psi \\rangle = \\frac{\\sqrt{3}}{2}\\lvert 1 \\rangle + \\frac{1}{2}\\lvert 2 \\rangle\\) is measured? 3 worlds with \\(\\lvert 1 \\rangle\\) and 1 world with \\(\\lvert 2 \\rangle\\)?\nComputed tomography\nSterogram generation (this would be a fun rust project to start)"
+  },
+  {
+    "objectID": "posts/2025-05-18_project-backlog/index.html",
+    "href": "posts/2025-05-18_project-backlog/index.html",
+    "title": "Project Backlog",
+    "section": "",
+    "text": "Some project ideas:\n\nRust Projects\n\nRaytracing in Rust with parallelization and GPU support.\nRendering code (from geometric primitives) from scratch.\nScientific Plotting Code (in Rust)\n\nML From Scratch (in Rust)\n\nLinear Regression\nLogistic Regression\nDecision Trees (CART)\nRandom Forests\nBoosted Trees\nEnsembling\nCross Validation\nBayesian Hyperparameter Optimization\nClustering (Kmeans)\nDimensionality Reduction (PCA)\nNMF, PMF, GTM, GSM\n\nData visualization with D3.js\nPython Package using uv for NMF, GTM, GSM\nReaction kinetics package a la AutoChem\nDiscrete Differential Geometry processing (with ML applications) in Rust (with python bindings via pyo3)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "John Waczak, PhD",
+    "section": "",
+    "text": "Hello there! I’m John (last name pronounced “Wah-zak”), a recently graduated PhD physicist with interestes spanning applied physics, data science, machine learning, real-time sensing systems, remote sensing, and more. I’ll be using this site to host a combination of blog posts, resources, and an assortment of family recipes."
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Blog Posts",
+    "section": "",
+    "text": "Project Backlog\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\nMay 18, 2025\n\n\nJohn Waczak\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "old/about.html",
@@ -61,12 +68,5 @@
     "title": "About Me",
     "section": "",
     "text": "Me\n\n\nI am a 3rd year graduate student studying physics at the University of Texas at Dallas. I am working with Dr. David Lary to apply methods from machine learning to autonomous robotic teams for remote sensing of the environment. Check out our recent paper here and this great youtube video detailing the project.\nI have a wide variety of interests ranging from physics and mathematics to computation and machine learning. My plan is to use this site to detail the projects I’m working on as well as short blog posts about topics from math, physics, and machine learning."
-  },
-  {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "Blog Posts",
-    "section": "",
-    "text": "First blog post!\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\nOct 25, 2024\n\n\nJohn Waczak\n\n\n\n\n\n\nNo matching items"
   }
 ]
